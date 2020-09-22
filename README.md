@@ -1,22 +1,20 @@
 # back-end
 
 
-Registeration/Login End points
+<h2>Registeration/Login End points</h2>
 
 description: these two endpoints will allow the client to register/login a user acount, they are both POST requests. 
 
-👉 POST api/admission/register : YOU provide username and password : IT returns  {
+👉 POST api/admission/register 
+
+provide username and password both required and username must be unique
+ <img src="https://i.ibb.co/10v3zmz/register-Post-Request.png"/>
+
+ This will return the following object 
+
+  <img src="https://i.ibb.co/WHQT1w6/register-Post-Response.png">
 
 
-    data: {
-        id: Number,
-        username: String, 
-        password: String
-    },
-    token: String
-
-
-}
 
 !!!! please save the token to local storage and also you will need to save the user's Id either in local storage or in your state you will need the ID to access the user's tasks so SAVE IT !!!!
 

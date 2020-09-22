@@ -59,7 +59,11 @@ GET api/user/tasks/:id : YOU provide the logged in user's Id in the get request:
 
 POST api/user/tasks/:id : YOU provide the user's id to post the task to, it will return the list of all the tasks !!!! please look at this example 
 
-axios.post("/api/user/tasks/1", {
+
+{
+
+    
+ axios.post("/api/user/tasks/1", {
 
 
     "task": "example",
@@ -70,6 +74,7 @@ axios.post("/api/user/tasks/1", {
     
 })
 
+}
 this request will return data : [
     {/////},
     {

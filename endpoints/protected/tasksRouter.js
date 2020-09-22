@@ -3,7 +3,7 @@ const dataBase = require("../../data/db-model");
 const protect = require("../authorization/restrict");
 
 // get all the users
-router.get("/allusers", protect,  async (req,res)=>{
+router.get("/allusers",  async (req,res)=>{
     try {
         const users = await dataBase.getAllUsers();
         res.status(200).json({data: users})

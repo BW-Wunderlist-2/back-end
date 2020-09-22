@@ -10,12 +10,12 @@ const server = express();
 
 server.use(helmet());
 server.use(express.json());
-server.use(
-    cors({
-        origin: "*",
-        credentials: true,
-    })
-);
+server.use(cors());
+
+// {
+//     origin: "*",
+//     credentials: true,
+// }
 server.use("/api/admission", accessRouter)
 server.use("/api", tasksRouter)
 // server.use("/api/auth", authRouter);

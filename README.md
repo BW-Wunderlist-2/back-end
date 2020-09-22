@@ -44,9 +44,22 @@ the response will look something like this:
 provide the following just like this picture
 <img src="https://i.ibb.co/c1BYFKW/POST-A-TASK.png" />
 
-The response will be like this :
+The response will be like this (the number after the tasks in the request refers to the user's Id ):
 
 <img src="https://i.ibb.co/HLcGTTz/POSTATAKS-RRESPONST.png">
 
 
 <h2>Accessing a Single Task for updating and deleting</h2>
+
+To access a single task you will no longer need to user the user's Id but just acccess the Id of the task directly the endpoints are like this.
+
+<h5>👉Get /api/single-task/:id </h5>
+The Id will refer to the TASK ID!!!! not the user Id it will return that specific task 
+
+<h5>👉Put /api/single-task/:id </h5>
+
+Same thing now just add the changes 
+
+<h5>👉DELETE /api/single-task/:id </h5>
+
+provide the TASK ID you want deleted!!!!

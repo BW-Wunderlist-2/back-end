@@ -5,6 +5,9 @@ const router = require("express").Router();
 const  isValid = require("../authorization/isValid");
 const { options } = require("../server");
 
+router.get("/nothing", (req,res)=>{
+    res.status(200).json({message: "hey there"})
+})
 
 router.post("/register", (req, res) => {
     const credentials = req.body;

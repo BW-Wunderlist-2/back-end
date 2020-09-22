@@ -37,7 +37,6 @@ module.exports = {
       database: 'my_db',
       user:     'username',
       password: 'password',
-      filename: './data/db.sqlite3'
     },
     pool: {
       min: 2,

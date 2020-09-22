@@ -3,15 +3,23 @@ const dataBase = require("../../data/db-model");
 const protect = require("../authorization/restrict");
 
 // get all the users
-router.get("/allusers",  async (req,res)=>{
-    try {
-        const users = await dataBase.getAllUsers();
-        res.status(200).json({data: users})
-    } 
-    catch (err){
-        res.status(500).json({message: "there was a internal server problem"})
-    }
+router.get("/allusers", (req,res)=>{
+    dataBase.getAllUsers()
+    .then(user=>{
+        res.status(200).json({data: user})
+    }).catch((err)=>{
+        res.status(500).json({message: err.message})
+    })
 })
+// router.get("/allusers", async (req,res)=>{
+//     try {
+//         const users = await dataBase.getAllUsers();
+//         res.status(200).json({data: users})
+//     } 
+//     catch (err){
+//         res.status(500).json({message: "there was a internal server problem"})
+//     }
+// })
 
 // get user's tasks // requires token 
 router.get("/user/tasks/:id", protect, async (req,res)=>{

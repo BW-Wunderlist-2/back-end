@@ -5,7 +5,7 @@
 
 description: these two endpoints will allow the client to register/login a user acount, they are both POST requests. 
 
-👉 POST api/admission/register 
+<h5>👉 POST api/admission/register </h5>
 
 provide username and password both required and username must be unique
  <img src="https://i.ibb.co/10v3zmz/register-Post-Request.png"/>
@@ -16,7 +16,7 @@ provide username and password both required and username must be unique
 
 !!!! please save the token to local storage and also you will need to save the user's Id either in local storage or in your state you will need the ID to access the user's tasks so SAVE IT !!!!
 
-👉 POST api/admission/login
+<h5>👉 POST api/admission/login</h5>
  YOU provide username and password
 <img src="https://i.ibb.co/MgLjy2k/Login-Post-request.png">
 
@@ -31,39 +31,22 @@ the request will return the following :
 
 
 
-👉GET api/user/tasks/:id : YOU provide the logged in user's Id in the get request: It returns all the tasks for the specified user (it should return  data: [] , in the beginning as there are no tasks)
+<h5>👉GET api/user/tasks/:id </h5>
+
+ YOU provide the logged in user's Id in the get request: It returns all the tasks for the specified user (it should return  data: [] , in the beginning as there are no tasks)
 <img src="https://i.ibb.co/s1h2F1z/Get-Tasks-Request.png">
 
 the response will look something like this: 
 <img src="https://i.ibb.co/tLgtQND/get-tasks-response.png" />
 
 
-👉POST api/user/tasks/:id : YOU provide the user's id to post the task to, it will return the list of all the tasks !!!! please look at this example 
+<h5>👉POST api/user/tasks/:id </h5>
+provide the following just like this picture
+<img src="https://i.ibb.co/c1BYFKW/POST-A-TASK.png" />
+
+The response will be like this :
+
+<img src="https://i.ibb.co/HLcGTTz/POSTATAKS-RRESPONST.png">
 
 
-{
-
-    
- axios.post("/api/user/tasks/1", {
-
-
-    "task": "example",
-    "description": "hello world",
-    "complete" : false,
-    "dueDate": "9/25/2020"
-
-    
-})
-
-}
-this request will return data : [
-    {/////},
-    {
-    "task": "example",
-    "description": "hello world",
-    "complete" : false,
-    "dueDate": "9/25/2020",
-    "id": 1 !!!! this will refer to the tasks id 
-    "user_id": "this will refer to the user who added the task
-}
-]
+<h2>Accessing a Single Task for updating and deleting</h2>

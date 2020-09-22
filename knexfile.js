@@ -16,9 +16,9 @@ module.exports = {
   },
 
   staging: {
-    client: 'postgresql',
+    client: 'sqlite3',
     connection: {
-      database: 'my_db',
+      database: './data/db.sqlite3',
       user:     'username',
       password: 'password'
     },
@@ -32,9 +32,9 @@ module.exports = {
   },
 
   production: {
-    client: 'postgresql',
+    client: 'sqlite3',
     connection: {
-      database: 'my_db',
+      database: './data/db.sqlite3',
       user:     'username',
       password: 'password'
     },

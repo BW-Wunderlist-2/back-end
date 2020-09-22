@@ -23,7 +23,8 @@ server.use("/api", tasksRouter)
 
 server.get("/", (req, res) => {
  
-    res.sendFile("message.html", {root: __dirname});
+    // res.sendFile("message.html", {root: __dirname});
+    res.send("we are on")
 });
 
 module.exports = server;

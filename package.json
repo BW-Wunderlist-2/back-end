@@ -6,7 +6,8 @@
   "scripts": {
     "server": "nodemon index.js",
     "rb": "knex migrate:rollback",
-    "lt": "knex migrate:latest"
+    "lt": "knex migrate:latest",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
